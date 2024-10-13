@@ -1,0 +1,6 @@
+streamlit
+cohere
+pinecone
+langchain
+sentence-transformers
+PyPDF2

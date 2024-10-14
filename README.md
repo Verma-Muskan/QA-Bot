@@ -32,9 +32,22 @@ This project is a Question Answering (QA) bot developed using a Retrieval-Augmen
 4. **Run the Docker Container**:
    ```bash
    docker run -p 8501:8501 qa-bot
+   
+5. **Deployment on Render**:
+- **a.	Upload to GitHub**:
+   
+*	Push the code and Dockerfile to a GitHub repository.
+- **b.	Render Deployment**:
 
-5. **Access the Application**:
-Open a browser and go to http://localhost:8501 to interact with the QA bot.
+* Create a new Web Service on Render, linking to the GitHub repository.
+*	Choose Docker as the environment, and set environment variables for API keys.
+*	Render automatically builds and deploys the Docker container from the Dockerfile.
+*	After deployment, Render provides a URL where the bot can be accessed.
+
+
+6. **Access the Application**:
+Open a browser and go to https://qa-bot-371e.onrender.com/ to interact with the QA bot.
+
 
 ## Usage
 * Upload a PDF document using the upload button.

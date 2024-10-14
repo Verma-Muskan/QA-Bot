@@ -1,5 +1,6 @@
 import streamlit as st
 import fitz  
+import os
 from pinecone import Pinecone, ServerlessSpec
 from langchain.vectorstores import Pinecone as PineconeVectorStore
 import cohere
@@ -11,8 +12,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.docstore.document import Document
 
 # Set up API key
-PINECONE_API_KEY = st.secrets["PINECONE"]["API_KEY"]
-COHERE_API_KEY = st.secrets["COHERE"]["API_KEY"]
+PINECONE_API_KEY = os.getenv('PINECONE')
+COHERE_API_KEY = os.getenv('COHERE')
 
 
 # Initialize the SentenceTransformer model
